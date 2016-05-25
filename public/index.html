@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+
+	<title>MiniMEAN</title>
+
+	<!-- CSS -->	
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="libs/material-design-lite/material.min.css">
+    <script src="libs/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+
+	<!-- JS -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/MiniCtrl.js"></script>
+	<script src="js/services/MiniService.js"></script>
+	<script src="js/controllers/MaxiCtrl.js"></script>
+	<script src="js/services/MaxiService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="sampleApp" ng-controller="MiniController">
+
+ 
+    
+    <!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"><a class="material-icons md-48" href="/">home</a></span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/mini">Mini</a>
+      <a class="mdl-navigation__link" href="/maxi">Maxi</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+                
+       
+        
+       <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">                 
+                  
+                  <!-- ANGULAR DYNAMIC CONTENT -->
+	<div ng-view></div>
+                  
+<!----------------------------------- Tester lidt material----->
+                  
+                <h4>Lorem Ipsum</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">En knap</a>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-left" for="btn3">
+              <li class="mdl-menu__item">Lorem</li>
+              <li class="mdl-menu__item" disabled>Ipsum</li>
+              <li class="mdl-menu__item">Dolor</li>
+            </ul>
+          </section>   
+           
+ <!------------------------------------------------- Tester en Icon List -->
+<style>
+.demo-list-icon {
+  width: 300px;
+}
+</style>
+
+<ul class="demo-list-icon mdl-list">
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+    <i class="material-icons mdl-list__item-icon">person</i>
+    Mickey Mouse
+</span>
+  </li>
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+    <i class="material-icons mdl-list__item-icon">person</i>
+    Donald Duck
+  </span>
+  </li>
+  <li class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+    <i class="material-icons mdl-list__item-icon">person</i>
+    Goofy
+  </span>
+  </li>
+</ul></div>
+  </main>
+</div>
+</body>
+</html>
